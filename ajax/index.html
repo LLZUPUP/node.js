@@ -7,15 +7,18 @@
     <title>axios</title>
 </head>
 <body>
+    asdasd
     <div class="info">
         <p class="username"></p>
         <p class="desc"></p>
     </div>
     <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
     <script>
-        axios.get('/info.json')
+        axios.get('/info')
         .then(data=>{
             console.log(data.data)
+            document.querySelector('.username').innerHTML = data.data.name;
+            document.querySelector('.desc').innerHTML = data.data.desc;
         })
     </script>
 </body>
